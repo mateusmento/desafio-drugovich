@@ -9,6 +9,7 @@ import { ClientService } from './service/client.service';
 import { ClientViewComponent } from './views/client-view/client-view.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TopbarComponent } from './ui/topbar/topbar.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TopbarComponent } from './ui/topbar/topbar.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot({ validation: false })
   ],
   providers: [
     ClientService
