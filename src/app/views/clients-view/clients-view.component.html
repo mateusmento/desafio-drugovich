@@ -16,7 +16,7 @@
       <td>{{client.cnpj | mask: '00.000.000/0000-00'}}</td>
       <td>{{client.status}}</td>
       <td>
-        <a routerLink="/cliente">
+        <a [routerLink]="'/cliente/' + client.id">
           <button class="edit-button">EDITAR</button>
         </a>
       </td>
