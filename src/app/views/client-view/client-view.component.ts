@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ClientStatus } from 'src/app/model/client.model';
 
 @Component({
   selector: 'app-client-view',
@@ -8,8 +9,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class ClientViewComponent {
   client = new FormGroup({
-    name: new FormControl(""),
-    cnpj: new FormControl(""),
-    status: new FormControl("Ativo"),
+    name: new FormControl("", { nonNullable: true }),
+    cnpj: new FormControl("", { nonNullable: true }),
+    status: new FormControl<ClientStatus>("Ativo", { nonNullable: true }),
   })
 }
