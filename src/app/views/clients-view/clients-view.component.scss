@@ -47,6 +47,7 @@
 }
 
 table {
+    table-layout: auto;
     width: 100%;
     border-spacing: 0 10px;
 }
@@ -55,3 +56,27 @@ td {
     background-color: white;
     padding: 10px;
 }
+
+.fit-cell {
+    width: 0;
+    white-space: nowrap;
+}
+
+.status-cell {
+    display: flex;
+    align-items: center;
+}
+
+.status-display {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #2ACC30;
+
+    &.inactive {
+        background-color: #EC2424;
+    }
+}
+
