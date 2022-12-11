@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ClientViewComponent } from './views/client-view/client-view.component';
 import { ClientsViewComponent } from './views/clients-view/clients-view.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "clients", pathMatch: "full" },
-  { path: "clients", component: ClientsViewComponent }
+  { path: "", redirectTo: "clientes", pathMatch: "full" },
+  { path: "clientes", component: ClientsViewComponent },
+  { path: "cliente", component: ClientViewComponent }
 ];
 
 @NgModule({
