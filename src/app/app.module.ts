@@ -8,12 +8,14 @@ import { HttpClientModule } from "@angular/common/http";
 import { ClientService } from './service/client.service';
 import { ClientViewComponent } from './views/client-view/client-view.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TopbarComponent } from './ui/topbar/topbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientsViewComponent,
-    ClientViewComponent
+    ClientViewComponent,
+    TopbarComponent
   ],
   imports: [
     BrowserModule,
