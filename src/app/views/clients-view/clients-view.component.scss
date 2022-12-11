@@ -14,3 +14,17 @@
 .account-icon {
     margin-right: 10px
 }
+
+.create-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4486EA;
+    color: white;
+    font-size: 16px;
+}
+
