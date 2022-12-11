@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-client-view',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./client-view.component.scss']
 })
 export class ClientViewComponent {
-
+  client = new FormGroup({
+    name: new FormControl(""),
+    cnpj: new FormControl(""),
+    status: new FormControl("Ativo"),
+  })
 }

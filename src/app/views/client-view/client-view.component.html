@@ -2,18 +2,18 @@
     <div>Novo Cliente</div>
 </div>
 
-<form>
+<form [formGroup]="client">
     <div class="field">
         <label for="name">Nome</label>
-        <input id="name" name="name"/>
+        <input id="name" formControlName="name"/>
     </div>
     <div class="field">
         <label for="cnpj">CNPJ</label>
-        <input id="cnpj" name="cnpj"/>
+        <input id="cnpj" formControlName="cnpj"/>
     </div>
     <div class="field">
         <label for="status">Status</label>
-        <select id="status" name="status">
+        <select id="status" formControlName="status">
             <option value="Ativo">Ativo</option>
             <option value="Inativo">Inativo</option>
         </select>
