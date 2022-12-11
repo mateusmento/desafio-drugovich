@@ -1,1 +1,9 @@
-<p>clients-view works!</p>
+<table>
+  <tbody>
+    <tr *ngFor="let client of clients">
+      <td>{{client.name}}</td>
+      <td>{{client.cnpj}}</td>
+      <td>{{client.status}}</td>
+    </tr>
+  </tbody>
+</table>
