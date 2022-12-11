@@ -6,7 +6,8 @@ import { ClientsViewComponent } from './views/clients-view/clients-view.componen
 const routes: Routes = [
   { path: "", redirectTo: "clientes", pathMatch: "full" },
   { path: "clientes", component: ClientsViewComponent },
-  { path: "cliente", component: ClientViewComponent }
+  { path: "cliente", component: ClientViewComponent },
+  { path: "cliente/:id", component: ClientViewComponent }
 ];
 
 @NgModule({
