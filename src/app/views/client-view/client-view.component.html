@@ -1,9 +1,9 @@
 <div class="title-bar">
-  <img src="/assets/account.svg"/>
-  <div>Novo Cliente</div>
+  <img class="account-icon" src="/assets/account.svg"/>
+  <div class="title">Novo Cliente</div>
 </div>
 
-<form [formGroup]="client" (ngSubmit)="saveClient()">
+<form class="client-form" [formGroup]="client" (ngSubmit)="saveClient()">
   <div class="field">
     <label for="name">Nome</label>
     <input id="name" formControlName="name" />
@@ -19,5 +19,5 @@
       <option value="Inativo">Inativo</option>
     </select>
   </div>
-  <button type="submit">SALVAR</button>
+  <button class="save-button" type="submit">SALVAR</button>
 </form>
