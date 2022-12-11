@@ -1,1 +1,22 @@
-<p>client-view works!</p>
+<div class="title-bar">
+    <div>Novo Cliente</div>
+</div>
+
+<form>
+    <div class="field">
+        <label for="name">Nome</label>
+        <input id="name" name="name"/>
+    </div>
+    <div class="field">
+        <label for="cnpj">CNPJ</label>
+        <input id="cnpj" name="cnpj"/>
+    </div>
+    <div class="field">
+        <label for="status">Status</label>
+        <select id="status" name="status">
+            <option value="Ativo">Ativo</option>
+            <option value="Inativo">Inativo</option>
+        </select>
+    </div>
+    <button type="submit">SALVAR</button>
+</form>
