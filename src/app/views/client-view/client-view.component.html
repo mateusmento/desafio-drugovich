@@ -2,14 +2,14 @@
     <div>Novo Cliente</div>
 </div>
 
-<form [formGroup]="client">
+<form [formGroup]="client" (ngSubmit)="saveClient()">
     <div class="field">
         <label for="name">Nome</label>
-        <input id="name" formControlName="name"/>
+    <input id="name" formControlName="name" />
     </div>
     <div class="field">
         <label for="cnpj">CNPJ</label>
-        <input id="cnpj" formControlName="cnpj"/>
+    <input id="cnpj" formControlName="cnpj" />
     </div>
     <div class="field">
         <label for="status">Status</label>
