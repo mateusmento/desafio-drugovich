@@ -1,9 +1,17 @@
+<div class="title-bar">
+  <div>Listagem de Clientes</div>
+  <button>NOVO</button>
+</div>
+
 <table>
   <tbody>
     <tr *ngFor="let client of clients">
       <td>{{client.name}}</td>
       <td>{{client.cnpj}}</td>
       <td>{{client.status}}</td>
+      <td>
+        <button>EDITAR</button>
+      </td>
     </tr>
   </tbody>
 </table>
