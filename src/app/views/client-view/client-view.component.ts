@@ -25,8 +25,12 @@ export class ClientViewComponent {
   ) {}
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params => {
+    this.route.params.subscribe(params => {
       this.clientId = params['id'];
+      if (this.clientId) {
+        this.clientService.fetchClient(this.clientId)
+          .subscribe(client => this.client.patchValue(client));
+      }
     });
   }
 
