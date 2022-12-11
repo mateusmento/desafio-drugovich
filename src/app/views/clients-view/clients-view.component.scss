@@ -20,7 +20,7 @@
     justify-content: space-between;
     align-items: center;
     width: 95px;
-    padding: 10px;
+    padding: 8px;
     border: none;
     border-radius: 5px;
     background-color: #4486EA;
@@ -28,3 +28,15 @@
     font-size: 16px;
 }
 
+.edit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #E18F53;
+    color: white;
+    font-size: 16px;
+}
