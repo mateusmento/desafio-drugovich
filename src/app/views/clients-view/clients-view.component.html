@@ -13,7 +13,7 @@
   <tbody>
     <tr *ngFor="let client of clients">
       <td>{{client.name}}</td>
-      <td>{{client.cnpj}}</td>
+      <td>{{client.cnpj | mask: '00.000.000/0000-00'}}</td>
       <td>{{client.status}}</td>
       <td>
         <a routerLink="/cliente">
