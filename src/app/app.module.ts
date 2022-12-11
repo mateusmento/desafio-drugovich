@@ -7,7 +7,7 @@ import { ClientsViewComponent } from './views/clients-view/clients-view.componen
 import { HttpClientModule } from "@angular/common/http";
 import { ClientService } from './service/client.service';
 import { ClientViewComponent } from './views/client-view/client-view.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     ClientService
