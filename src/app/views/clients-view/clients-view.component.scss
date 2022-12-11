@@ -69,13 +69,8 @@ td {
     font-size: 12px;
 }
 
-.status-cell {
-    display: flex;
-    align-items: center;
-}
-
 .status-display {
-    display: block;
+    display: inline-block;
     width: 15px;
     height: 15px;
     margin-right: 10px;
