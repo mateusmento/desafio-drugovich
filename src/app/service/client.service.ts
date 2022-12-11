@@ -13,4 +13,7 @@ export class ClientService {
     return this.http.get<Client[]>(this.baseUrl + "/clients");
   }
 
+  createClient(client: Client) {
+    return this.http.post<Client>(this.baseUrl + "/clients", client);
+  }
 }
