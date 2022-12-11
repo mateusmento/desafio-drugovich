@@ -13,7 +13,7 @@
   <tbody>
     <tr *ngFor="let client of clients">
       <td class="fit-cell">{{client.name}}</td>
-      <td>{{client.cnpj | mask: '00.000.000/0000-00'}}</td>
+      <td class="cnpj-cell">{{client.cnpj | mask: '00.000.000/0000-00'}}</td>
       <td>
         <div class="status-cell">
           <div class="status-display" [class.inactive]="client.status === 'Inativo'"></div>
