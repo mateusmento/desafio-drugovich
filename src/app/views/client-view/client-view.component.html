@@ -1,22 +1,23 @@
 <div class="title-bar">
-    <div>Novo Cliente</div>
+  <img src="/assets/account.svg"/>
+  <div>Novo Cliente</div>
 </div>
 
 <form [formGroup]="client" (ngSubmit)="saveClient()">
-    <div class="field">
-        <label for="name">Nome</label>
+  <div class="field">
+    <label for="name">Nome</label>
     <input id="name" formControlName="name" />
-    </div>
-    <div class="field">
-        <label for="cnpj">CNPJ</label>
+  </div>
+  <div class="field">
+    <label for="cnpj">CNPJ</label>
     <input id="cnpj" formControlName="cnpj" />
-    </div>
-    <div class="field">
-        <label for="status">Status</label>
-        <select id="status" formControlName="status">
-            <option value="Ativo">Ativo</option>
-            <option value="Inativo">Inativo</option>
-        </select>
-    </div>
-    <button type="submit">SALVAR</button>
+  </div>
+  <div class="field">
+    <label for="status">Status</label>
+    <select id="status" formControlName="status">
+      <option value="Ativo">Ativo</option>
+      <option value="Inativo">Inativo</option>
+    </select>
+  </div>
+  <button type="submit">SALVAR</button>
 </form>
