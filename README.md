@@ -4,11 +4,15 @@
 
 Projeto consiste em uma aplicação de cadastro de clientes (nome, cnpj e status). Foram criado duas páginas:
 
-- Página de listagem de clientes `/clientes` e `/`
-- Página de criação ou edição de cliente `/cliente` ou `/cliente/:id`
+- Página de listagem de clientes `/clientes` e `/` 👌
+- Página de criação ou edição de cliente `/cliente` ou `/cliente/:id` 👍
 
 Aplicação faz uso da MockAPI para buscar, cadastrar e atualizar dados dos clientes.
 > https://63966e4a90ac47c68085cb9c.mockapi.io
+
+Ferramenta contém validação dos dados do cliente ao cadastrar e atualizar. 😊
+
+Layout da ferramenta foi criado com design responsível. ❤️
 
 ## Uso
 Antes de executar a aplicação, instale as dependências com
