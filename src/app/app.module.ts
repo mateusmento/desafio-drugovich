@@ -7,6 +7,7 @@ import { ClientsViewComponent } from './views/clients-view/clients-view.componen
 import { HttpClientModule } from "@angular/common/http";
 import { ClientService } from './service/client.service';
 import { ClientViewComponent } from './views/client-view/client-view.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ClientViewComponent } from './views/client-view/client-view.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     ClientService
