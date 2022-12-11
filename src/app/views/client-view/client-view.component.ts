@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { ClientStatus } from 'src/app/model/client.model';
 import { ClientService } from 'src/app/service/client.service';
@@ -14,8 +14,8 @@ export class ClientViewComponent {
   clientId?: number;
 
   client = new FormGroup({
-    name: new FormControl("", { nonNullable: true }),
-    cnpj: new FormControl("", { nonNullable: true }),
+    name: new FormControl("", { nonNullable: true, validators: [Validators.required] }),
+    cnpj: new FormControl("", { nonNullable: true, validators: [Validators.required, Validators.minLength(14)] }),
     status: new FormControl<ClientStatus>("Ativo", { nonNullable: true }),
   });
 
@@ -32,6 +32,11 @@ export class ClientViewComponent {
           .subscribe(client => this.client.patchValue(client));
       }
     });
+  }
+
+  submitClient() {
+    if (this.client.invalid) return;
+    this.saveClient();
   }
 
   saveClient() {

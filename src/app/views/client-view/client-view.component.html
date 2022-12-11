@@ -3,14 +3,30 @@
   <div class="title">Novo Cliente</div>
 </div>
 
-<form class="client-form" [formGroup]="client" (ngSubmit)="saveClient()">
+<form class="client-form" #ngForm="ngForm" [formGroup]="client" (ngSubmit)="submitClient()">
   <div class="field">
     <label for="name">Nome</label>
-    <input id="name" formControlName="name" />
+    <input
+      id="name"
+      formControlName="name"
+      autocomplete="off"
+    />
+    <small *ngIf="client.controls.name.errors && ngForm.submitted">
+      <div *ngIf="client.controls.name.errors['required']">Campo obrigatório</div>
+    </small>
   </div>
   <div class="field">
     <label for="cnpj">CNPJ</label>
-    <input id="cnpj" mask="00.000.000/0000-00" formControlName="cnpj" />
+    <input
+      id="cnpj"
+      mask="00.000.000/0000-00"
+      formControlName="cnpj"
+      autocomplete="off"
+    />
+    <small *ngIf="client.controls.cnpj.errors && ngForm.submitted">
+      <div *ngIf="client.controls.cnpj.errors['required']">Campo obrigatório</div>
+      <div *ngIf="client.controls.cnpj.errors['minlength']">Preencha o campo completamente</div>
+    </small>
   </div>
   <div class="field">
     <label for="status">Status</label>
