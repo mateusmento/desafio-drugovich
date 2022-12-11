@@ -120,3 +120,21 @@ td {
         font-size: 1.2rem;
     }
 }
+
+@media (max-width: 380px) {
+    tr {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .cnpj-cell {
+        text-align: left;
+    }
+
+    .status-cell {
+        padding-top: 0;
+    }
+}
