@@ -12,15 +12,13 @@
 <table>
   <tbody>
     <tr *ngFor="let client of clients">
-      <td class="fit-cell">{{client.name}}</td>
+      <td class="name-cell fit-cell">{{client.name}}</td>
       <td class="cnpj-cell">{{client.cnpj | mask: '00.000.000/0000-00'}}</td>
-      <td>
-        <div class="status-cell">
-          <div class="status-display" [class.inactive]="client.status === 'Inativo'"></div>
-          {{client.status}}
-        </div>
+      <td class="status-cell">
+        <div class="status-display" [class.inactive]="client.status === 'Inativo'"></div>
+        {{client.status}}
       </td>
-      <td class="fit-cell">
+      <td class="edit-cell fit-cell">
         <a [routerLink]="'/cliente/' + client.id">
           <button class="edit-button">EDITAR</button>
         </a>

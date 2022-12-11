@@ -52,14 +52,17 @@ table {
     border-spacing: 0 10px;
 }
 
-td {
+tr {
     background-color: white;
+}
+
+td {
     padding: 10px;
+    white-space: nowrap;
 }
 
 .fit-cell {
     width: 0;
-    white-space: nowrap;
 }
 
 .cnpj-cell {
@@ -84,6 +87,36 @@ td {
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 780px) {
+    tr {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
 
+    td {
+        display: block;
+        padding: 0;
+    }
+
+    .fit-cell {
+        width: unset;
+    }
+
+    .cnpj-cell {
+        text-align: right;
+        padding-top: 3px;
+    }
+
+    .status-cell {
+        padding-top: 5px;
+    }
+}
+
+@media (max-width: 540px) {
+    .title-bar .title {
+        font-size: 1.2rem;
+    }
 }
