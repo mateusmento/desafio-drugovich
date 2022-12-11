@@ -1,6 +1,8 @@
 <div class="title-bar">
   <div>Listagem de Clientes</div>
-  <button>NOVO</button>
+  <a routerLink="/cliente">
+    <button>NOVO</button>
+  </a>
 </div>
 
 <table>
@@ -10,7 +12,9 @@
       <td>{{client.cnpj}}</td>
       <td>{{client.status}}</td>
       <td>
-        <button>EDITAR</button>
+        <a routerLink="/cliente">
+          <button>EDITAR</button>
+        </a>
       </td>
     </tr>
   </tbody>
