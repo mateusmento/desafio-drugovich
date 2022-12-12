@@ -42,9 +42,9 @@ export class ClientViewComponent {
   saveClient() {
     if (this.clientId)
       this.clientService.updateClient(this.clientId, this.client.getRawValue())
-        .subscribe(res => this.client.setValue(res));
+        .subscribe(res => this.client.patchValue(res));
     else
       this.clientService.createClient(this.client.getRawValue())
-        .subscribe(res => this.client.setValue(res));
+        .subscribe(res => this.client.patchValue(res));
   }
 }
