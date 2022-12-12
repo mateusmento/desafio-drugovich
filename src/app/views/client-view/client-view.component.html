@@ -4,7 +4,7 @@
 </div>
 
 <form class="client-form" #ngForm="ngForm" [formGroup]="client" (ngSubmit)="submitClient()">
-  <div class="field">
+  <div class="field" [class.invalid]="client.controls.name.errors && ngForm.submitted">
     <label for="name">Nome</label>
     <input
       id="name"
@@ -15,7 +15,7 @@
       <div *ngIf="client.controls.name.errors['required']">Campo obrigatório</div>
     </small>
   </div>
-  <div class="field">
+  <div class="field" [class.invalid]="client.controls.cnpj.invalid && ngForm.submitted">
     <label for="cnpj">CNPJ</label>
     <input
       id="cnpj"
